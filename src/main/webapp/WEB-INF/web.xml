@@ -1,0 +1,30 @@
+<web-app xmlns="http://JAVA.sun.com/xml/ns/javaee" version="2.5"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- DELOYING THE DEMO SERVLET -->
+	
+	<context-param>
+	<param-name>cgst</param-name>
+	<param-value>18</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>first</servlet-name>
+		<servlet-class>com.ty.servlet_product.controller.ProductServlet</servlet-class>
+		
+		<init-param>
+		<param-name>sgst_kar</param-name>
+		<param-value>10</param-value>
+		</init-param>
+		
+		<init-param>
+		<param-name>sgst_tn</param-name>
+		<param-value>13</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/save</url-pattern>
+	</servlet-mapping>
+
+</web-app>
